@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamad Sewilam | Portfolio & CV</title>
+  <meta name="description" content="Portfolio personale di Hamad Said Mohamed Elsayed Ali Sewilam: studente di Ingegneria Informatica al Politecnico di Milano, certificazione IBM SkillsBuild in Cybersecurity e titolare di Sewilam Service.">
+  <meta name="author" content="Hamad Said Mohamed Elsayed Ali Sewilam">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e5e7eb;
+      backdrop-filter: blur(8px);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: 800;
+      color: #111827;
+      text-decoration: none;
+      font-size: 1.1rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 14px;
+    }
+
+    .nav-links a {
+      color: #374151;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.93rem;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 85px 20px;
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .tag {
+      color: #2563eb;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4.3rem);
+      line-height: 1.08;
+      margin-bottom: 18px;
+    }
+
+    h1 span {
+      color: #2563eb;
+    }
+
+    .hero-text {
+      font-size: 1.12rem;
+      color: #4b5563;
+      max-width: 720px;
+    }
+
+    .buttons {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .secondary {
+      border: 2px solid #2563eb;
+      color: #2563eb;
+      background: white;
+    }
+
+    .hero-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(31, 41, 55, 0.08);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eff6ff;
+      font-size: 3.6rem;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .section > p {
+      color: #4b5563;
+      max-width: 860px;
+    }
+
+    .dark {
+      max-width: none;
+      background: #111827;
+      color: white;
+    }
+
+    .dark > * {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .dark p {
+      color: #d1d5db;
+    }
+
+    .grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      color: #1f2937;
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 12px 26px rgba(31, 41, 55, 0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #4b5563;
+    }
+
+    .wide {
+      grid-column: span 3;
+    }
+
+    .skills {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skills span {
+      background: white;
+      color: #111827;
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    .list {
+      margin-top: 14px;
+      padding-left: 20px;
+    }
+
+    .list li {
+      margin-bottom: 8px;
+    }
+
+    .contact-box {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact-box a {
+      background: white;
+      color: #111827;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      background: #030712;
+      color: #d1d5db;
+    }
+
+    @media (max-width: 850px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 55px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wide {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="logo" href="#home">Hamad Sewilam</a>
+      <ul class="nav-links">
+        <li><a href="#chi-sono">Chi sono</a></li>
+        <li><a href="#formazione">Formazione</a></li>
+        <li><a href="#esperienza">Esperienza</a></li>
+        <li><a href="#competenze">Competenze</a></li>
+        <li><a href="#certificazioni">Certificazioni</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div>
+        <p class="tag">Ingegneria Informatica • Cybersecurity • Imprenditoria</p>
+        <h1>Ciao, sono <span>Hamad Sewilam</span></h1>
+        <p class="hero-text">
+          Sono Hamad Said Mohamed Elsayed Ali Sewilam, studente di Ingegneria Informatica al Politecnico di Milano.
+          Mi interesso di informatica, cybersecurity e sviluppo web. Oltre allo studio,
+          sono titolare di Sewilam Service, un’esperienza che mi ha aiutato a sviluppare responsabilità,
+          organizzazione, gestione dei clienti e mentalità imprenditoriale.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#contatti">Contattami</a>
+          <a class="btn secondary" href="#certificazioni">Vedi certificazioni</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="avatar">👨‍💻</div>
+        <h2>Portfolio personale</h2>
+        <p>Studente, imprenditore e appassionato di tecnologia.</p>
+      </div>
+    </section>
+
+    <section id="chi-sono" class="section">
+      <h2>Chi sono</h2>
+      <p>
+        Ho 22 anni e sto costruendo il mio percorso nel settore informatico. Il mio obiettivo è
+        migliorare le competenze tecniche in programmazione, cybersecurity e sviluppo web, unendo
+        la formazione universitaria con l’esperienza pratica nel mondo del lavoro.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Profilo</h3>
+          <p>Studente di Ingegneria Informatica con interesse per tecnologia, cybersecurity e sviluppo web.</p>
+        </article>
+
+        <article class="card">
+          <h3>Esperienza reale</h3>
+          <p>Titolare di Sewilam Service, con esperienza nella gestione dei clienti e delle attività operative.</p>
+        </article>
+
+        <article class="card">
+          <h3>Obiettivo</h3>
+          <p>Crescere nel settore informatico e costruire progetti utili per studio, lavoro e carriera.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="formazione" class="section dark">
+      <h2>Formazione</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Politecnico di Milano</h3>
+          <p><strong>Percorso:</strong> Ingegneria Informatica</p>
+          <p><strong>Stato:</strong> Studente</p>
+          <p>Percorso orientato all’informatica, alla tecnologia e allo sviluppo di competenze tecniche.</p>
+        </article>
+
+        <article class="card">
+          <h3>Scuola Superiore</h3>
+          <p><strong>Indirizzo:</strong> Scienze Umane – Economico Sociale</p>
+          <p>Formazione con basi in società, comunicazione, economia e contesto sociale.</p>
+        </article>
+
+        <article class="card">
+          <h3>Interessi di studio</h3>
+          <p>Programmazione, cybersecurity, sviluppo web, problem solving e tecnologie digitali.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="esperienza" class="section">
+      <h2>Esperienza professionale</h2>
+      <div class="grid">
+        <article class="card wide">
+          <h3>Titolare – Sewilam Service</h3>
+          <p>
+            Gestisco un’attività nel settore delle pulizie, occupandomi di organizzazione del lavoro,
+            comunicazione con i clienti, gestione operativa e qualità del servizio.
+          </p>
+          <ul class="list">
+            <li>Gestione clienti e comunicazione professionale</li>
+            <li>Organizzazione delle attività e dei tempi di lavoro</li>
+            <li>Responsabilità, puntualità e problem solving</li>
+            <li>Capacità imprenditoriali e gestionali</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="competenze" class="section dark">
+      <h2>Competenze</h2>
+      <div class="skills">
+        <span>Informatica</span>
+        <span>Cybersecurity Basics</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Gestione clienti</span>
+        <span>Organizzazione</span>
+        <span>Problem Solving</span>
+        <span>Imprenditoria</span>
+        <span>Comunicazione</span>
+        <span>Italiano</span>
+        <span>Arabo</span>
+      </div>
+    </section>
+
+    <section id="certificazioni" class="section">
+      <h2>Certificazioni</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Getting Started with Cybersecurity</h3>
+          <p><strong>Ente:</strong> IBM SkillsBuild</p>
+          <p><strong>Tipo:</strong> Certificate of Completion / Digital Credential</p>
+          <p>Certificazione introduttiva sui concetti base della cybersecurity e della sicurezza informatica.</p>
+        </article>
+
+        <article class="card">
+          <h3>Web Development Fundamentals</h3>
+          <p><strong>Ente:</strong> IBM SkillsBuild</p>
+          <p><strong>Stato:</strong> In corso / da completare</p>
+          <p>Percorso utile per rafforzare le basi di sviluppo web: HTML, CSS e JavaScript.</p>
+        </article>
+
+        <article class="card">
+          <h3>JavaScript</h3>
+          <p><strong>Obiettivo:</strong> Programmazione web</p>
+          <p>Competenza importante per costruire siti interattivi, portfolio e progetti pratici.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contatti" class="section dark">
+      <h2>Contatti</h2>
+      <p>
+        Disponibile per studio, collaborazioni, stage, progetti e opportunità professionali.
+      </p>
+      <div class="contact-box">
+        <a href="mailto:hammadsaid68@gmail.com">hammadsaid68@gmail.com</a>
+        <a href="tel:+393803759517">380 375 9517</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Hamad Said Mohamed Elsayed Ali Sewilam. Tutti i diritti riservati.</p>
+  </footer>
+</body>
+</html>
